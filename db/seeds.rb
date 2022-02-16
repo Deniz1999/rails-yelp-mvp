@@ -8,9 +8,11 @@
 require 'faker'
 Restaurant.destroy_all
 
+10.times do
 restaurant = Restaurant.new(name: Faker::Name.name, address:Faker::Address.city, phone_number: "07500524881", category: "belgian")
 restaurant.save!
 
 review = Review.new(content: 'yummy', rating: 5)
 review.restaurant = restaurant
 review.save!
+end

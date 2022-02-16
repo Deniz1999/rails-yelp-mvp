@@ -1,3 +1,5 @@
+<h1>My tasks</h1>
+
 <%= simple_form_for [@restaurant, @review], html: { class: 'mt-5' } do |form| %>
   <%= form.input :content %>
   <%= form.submit 'Create a review', class: 'btn btn-primary' %>
@@ -5,3 +7,9 @@
 
 
 <%= link_to 'Go back', restaurants_path %> %>
+
+<hr>
+
+<%= link_to new_restaurant_path do %>
+  <i class="fa fa-plus"></i> Add a new restaurant
+<% end %>
